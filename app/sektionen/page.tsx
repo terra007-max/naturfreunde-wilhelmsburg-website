@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Mountain, Snowflake, Compass, Bike, Route, Activity, ArrowUpToLine, Footprints } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-
-const SECTION_ICONS: Record<string, LucideIcon> = {
-  skitouren: Mountain,
-  wintersport: Snowflake,
-  wandern: Compass,
-  mtb: Bike,
-  radtouren: Route,
-  laufsport: Activity,
-  klettern: ArrowUpToLine,
-  "nordic-walking": Footprints,
-};
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import SectionIcon from "@/components/SectionIcon";
 import { SECTIONS, EVENTS, SITE } from "@/lib/data";
 import { formatDateShort, categoryColor } from "@/lib/utils";
 
@@ -49,7 +38,7 @@ export default function SektionenPage() {
               {/* Visual */}
               <div className="w-full lg:w-2/5 flex-shrink-0">
                 <div className={`relative rounded-3xl bg-gradient-to-br ${section.color} aspect-video flex items-center justify-center overflow-hidden shadow-lg`}>
-                  {(() => { const Icon = SECTION_ICONS[section.id]; return Icon ? <Icon className="w-24 h-24 opacity-80" /> : null; })()}
+                  <SectionIcon id={section.id} className="w-24 h-24 opacity-90" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-black/20 backdrop-blur-sm rounded-xl px-3 py-2">
                       <div className="text-white font-bold text-sm">{section.title}</div>
@@ -63,7 +52,9 @@ export default function SektionenPage() {
               {/* Content */}
               <div className="flex-1">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 flex items-center gap-3">
-                  {(() => { const Icon = SECTION_ICONS[section.id]; return Icon ? <Icon className="w-7 h-7 text-green-600 flex-shrink-0" /> : null; })()}
+                  <span className="text-green-600 flex-shrink-0">
+                    <SectionIcon id={section.id} className="w-8 h-8" />
+                  </span>
                   {section.title}
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-4">{section.description}</p>
