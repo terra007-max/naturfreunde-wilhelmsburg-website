@@ -44,3 +44,94 @@ html {
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
+
+/* ── Section icon hover animations ─────────────────────────── */
+
+/* Skier slides down the slope */
+@keyframes ski-slide {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  50%  { transform: translate(6px, 4px) rotate(8deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+.group:hover .icon-skier {
+  animation: ski-slide 0.7s ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+  will-change: transform;
+}
+
+/* Snowflake spins */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.group:hover .icon-snowflake {
+  animation: spin 1.2s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  will-change: transform;
+}
+
+/* Hiker bobs up and down */
+@keyframes hike-bob {
+  0%, 100% { transform: translateY(0); }
+  40%       { transform: translateY(-3px); }
+  70%       { transform: translateY(-1px); }
+}
+.group:hover .icon-hiker {
+  animation: hike-bob 0.7s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  will-change: transform;
+}
+
+/* Wheels spin */
+@keyframes wheel-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.group:hover .icon-wheel {
+  animation: wheel-spin 0.6s linear infinite;
+  transform-box: fill-box;
+  will-change: transform;
+}
+
+/* Runner bounces */
+@keyframes run-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+@keyframes lines-fly {
+  0%   { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-6px); opacity: 0; }
+}
+.group:hover .icon-runner {
+  animation: run-bounce 0.45s ease-in-out infinite;
+  transform-origin: bottom center;
+  transform-box: fill-box;
+  will-change: transform;
+}
+.group:hover .icon-motion-lines {
+  animation: lines-fly 0.45s ease-in-out infinite;
+  transform-box: fill-box;
+  will-change: transform, opacity;
+}
+
+/* Climber moves up */
+@keyframes climb-up {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+.group:hover .icon-climber {
+  animation: climb-up 0.7s ease-in-out infinite;
+  transform-box: fill-box;
+  will-change: transform;
+}
+
+/* Walker bobs */
+.group:hover .icon-walker {
+  animation: hike-bob 0.8s ease-in-out infinite;
+  transform-origin: bottom center;
+  transform-box: fill-box;
+  will-change: transform;
+}
