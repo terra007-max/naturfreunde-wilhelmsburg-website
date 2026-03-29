@@ -53,25 +53,25 @@ export type BoardMember = {
 
 export const BOARD: BoardMember[] = [
   {
-    role: "Obmann",
+    role: "Vorsitzender",
     name: "Andreas Stubhan",
     phone: "0676 82536200",
     email: "andreas.stubhan@naturfreunde-wilhelmsburg.at",
   },
   {
-    role: "Obfrau-Stellvertreterin",
+    role: "Vorsitzende-Stellvertreterin",
     name: "Heidelinde Putz",
     phone: "0664 88266232",
     email: "putz.h@a1.net",
   },
   {
-    role: "Obmann-Stellvertreter",
+    role: "Vorsitzender-Stellvertreter",
     name: "Günther Dörflinger",
     phone: "0676 3523357",
     email: "guenther.doerflinger@kwi.at",
   },
   {
-    role: "Obmann-Stellvertreter",
+    role: "Vorsitzender-Stellvertreter",
     name: "Christian Gaiswinkler",
     phone: "0664 5115235",
     email: "christiangaiswinkler@gmx.at",
@@ -228,6 +228,7 @@ export type NewsItem = {
   date: string;
   category: string;
   excerpt: string;
+  image?: string;
 };
 
 export const NEWS: NewsItem[] = [
@@ -238,6 +239,7 @@ export const NEWS: NewsItem[] = [
     category: "Skitouren",
     excerpt:
       "Unsere Skitourensektion absolvierte erfolgreich die 3000er-Schitouren-Tage im Ötztal (5.–8. März). Traumhafte Bedingungen und unvergessliche Gipfelerlebnisse!",
+    image: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2026/03/3000er_Gries_Wildspitze_Gipfelgruppe.jpg",
   },
   {
     id: "raeumungsaktion-2026",
@@ -246,6 +248,7 @@ export const NEWS: NewsItem[] = [
     category: "Umwelt",
     excerpt:
       "Über 30 freiwillige Mitglieder säuberten die Traisen-Ufer bei unserer Frühjahrs-Räumungsaktion. Gemeinsam für eine saubere Natur!",
+    image: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2026/03/IMG_9204-1200x714.jpeg",
   },
   {
     id: "faschingsumzug-2026",
@@ -254,6 +257,7 @@ export const NEWS: NewsItem[] = [
     category: "Gemeinschaft",
     excerpt:
       "Mit Kostümen und guter Laune nahmen wir am Faschingsumzug der Stadtgemeinde Wilhelmsburg teil – ein tolles Erlebnis für alle!",
+    image: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2026/02/Faschingsumzug-2026-Wilhelmsburg-Naturfreunde-1200x509.jpg",
   },
   {
     id: "neujahrswanderung-2026",
@@ -262,6 +266,7 @@ export const NEWS: NewsItem[] = [
     category: "Wandern",
     excerpt:
       "Auch dieses Jahr starteten wir gut gelaunt mit der beliebten Neujahrswanderung durch das Traisental – für einen aktiven Start in 2026.",
+    image: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2026/01/Silvester25_1-300x225.jpg",
   },
 ];
 

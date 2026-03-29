@@ -94,7 +94,7 @@ export default function SchitourenprogrammPage() {
           <Mountain className="w-10 h-10 mx-auto mb-3 opacity-80" />
           <h2 className="text-xl font-extrabold mb-2">Mitfahren oder Fragen?</h2>
           <p className="text-blue-200 text-sm mb-5 max-w-sm mx-auto">
-            Anmeldung und Infos zu allen Touren über Obmann Andreas Stubhan.
+            Anmeldung und Infos zu allen Touren über Vorsitzenden Andreas Stubhan.
             Alle Teilnehmer müssen Vereinsmitglieder sein.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

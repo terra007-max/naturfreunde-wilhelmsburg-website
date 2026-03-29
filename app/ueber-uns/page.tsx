@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { SITE, BOARD } from "@/lib/data";
+import MapEmbed from "@/components/MapEmbed";
 
 export const metadata: Metadata = {
   title: "Über uns",
@@ -146,6 +147,9 @@ export default function UeberUnsPage() {
           <p><strong>Bankverbindung:</strong> {SITE.bank.name}</p>
           <p><strong>IBAN:</strong> {SITE.bank.iban} | <strong>BIC:</strong> {SITE.bank.bic}</p>
         </div>
+
+        {/* Map */}
+        <MapEmbed />
 
         {/* Contact CTA */}
         <div className="bg-green-50 rounded-3xl p-8 text-center">
