@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckCircle2, ArrowRight, Users, Shield, Map, Bus, Camera, BookOpen } from "lucide-react";
-import { SITE, MEMBERSHIP_FEES, MEMBERSHIP_BENEFITS } from "@/lib/data";
+import { CheckCircle2, Users, Shield, Map, Bus, Camera, BookOpen } from "lucide-react";
+import { SITE, MEMBERSHIP_BENEFITS } from "@/lib/data";
+import MembershipSelector from "@/components/MembershipSelector";
 
 export const metadata: Metadata = {
   title: "Mitglied werden",
@@ -13,18 +13,18 @@ const BENEFIT_ICONS = [Map, Shield, BookOpen, Shield, Bus, Camera, Map, Users];
 const STEPS = [
   {
     number: "01",
-    title: "Formular ausfüllen",
-    description: "Fülle das Aufnahmeformular mit deinen Daten aus – dauert nur 2 Minuten.",
+    title: "Mitgliedschaft wählen",
+    description: "Wähle deine Mitgliedschaftsart – Erwachsene, Familie, Kinder oder Senior:innen.",
   },
   {
     number: "02",
-    title: "Mitgliedsbeitrag bezahlen",
-    description: "Bezahle den Jahresbeitrag per Überweisung oder im Vereinsbüro.",
+    title: "E-Mail senden",
+    description: "Klicke auf 'Jetzt anmelden' – deine Auswahl ist bereits vorausgefüllt.",
   },
   {
     number: "03",
     title: "Mitgliedsausweis erhalten",
-    description: "Du erhältst deinen Mitgliedsausweis – und kannst sofort alle Vorteile nutzen.",
+    description: "Wir melden uns innerhalb von 24 Stunden und du kannst sofort alle Vorteile nutzen.",
   },
 ];
 
@@ -69,43 +69,8 @@ export default function MitgliedWerdenPage() {
           </div>
         </div>
 
-        {/* Pricing */}
-        <div className="mb-16">
-          <div className="text-center mb-10">
-            <div className="inline-block bg-green-100 text-green-700 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-              Beiträge
-            </div>
-            <h2 className="text-3xl font-extrabold text-gray-900">Jahresbeiträge 2026</h2>
-            <p className="text-gray-500 mt-2">Faire Preise für alle Altersgruppen</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {MEMBERSHIP_FEES.map((fee, i) => (
-              <div
-                key={fee.type}
-                className={`relative rounded-2xl border-2 p-6 transition-all ${
-                  i === 3
-                    ? "border-green-500 bg-green-50 shadow-md"
-                    : "border-gray-100 bg-white hover:border-green-200"
-                }`}
-              >
-                {i === 3 && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      Beliebt
-                    </span>
-                  </div>
-                )}
-                <div className="text-3xl font-extrabold text-gray-900 mb-1">
-                  {fee.price} €
-                  <span className="text-sm font-normal text-gray-400"> /Jahr</span>
-                </div>
-                <div className="font-bold text-gray-800 mb-1">{fee.type}</div>
-                <div className="text-sm text-gray-500">{fee.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Interactive pricing selector */}
+        <MembershipSelector />
 
         {/* Steps */}
         <div className="mb-16">
@@ -126,26 +91,6 @@ export default function MitgliedWerdenPage() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* CTA Form area */}
-        <div className="bg-gradient-to-br from-green-700 to-green-800 rounded-3xl p-8 sm:p-12 text-white text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Bereit loszulegen?</h2>
-          <p className="text-green-200 mb-6 max-w-md mx-auto">
-            Schreib uns eine E-Mail mit deinem Namen und gewünschter Mitgliedschaftsart –
-            wir melden uns innerhalb von 24 Stunden.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href={`mailto:${SITE.contact.email}?subject=Mitgliedsantrag&body=Hallo,%0A%0Aich möchte Mitglied bei den Naturfreunden Wilhelmsburg werden.%0A%0AName:%0AMitgliedschaftsart:%0A%0AMit freundlichen Grüßen`}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-green-800 font-bold rounded-xl hover:bg-green-50 transition-all shadow-lg hover:-translate-y-0.5"
-            >
-              Jetzt per E-Mail anmelden <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-          <p className="text-green-300 text-xs mt-4">
-            Oder direkt im Vereinsbüro: {SITE.address.street}, {SITE.address.zip} {SITE.address.city}
-          </p>
         </div>
       </div>
     </div>
