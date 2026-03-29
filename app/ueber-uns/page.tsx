@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Heart, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Heart, Mail, MapPin, Phone, User } from "lucide-react";
 import { SITE, BOARD } from "@/lib/data";
 import MapEmbed from "@/components/MapEmbed";
 
@@ -116,23 +117,32 @@ export default function UeberUnsPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {BOARD.map((member) => (
-              <div key={`${member.role}-${member.name}`} className="bg-gray-50 rounded-2xl p-4">
-                <div className="text-xs text-green-700 font-semibold uppercase tracking-wide mb-1">{member.role}</div>
-                <div className="font-bold text-gray-900">{member.name}</div>
-                {(member.phone || member.email) && (
-                  <div className="mt-1.5 space-y-0.5">
-                    {member.phone && (
-                      <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-green-700 transition-colors">
-                        <Phone className="w-3 h-3" /> {member.phone}
-                      </a>
-                    )}
-                    {member.email && (
-                      <a href={`mailto:${member.email}`} className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-green-700 transition-colors truncate">
-                        <Mail className="w-3 h-3 flex-shrink-0" /> {member.email}
-                      </a>
-                    )}
-                  </div>
-                )}
+              <div key={`${member.role}-${member.name}`} className="bg-gray-50 rounded-2xl p-4 flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full overflow-hidden bg-green-100 flex items-center justify-center">
+                  {member.photo ? (
+                    <Image src={member.photo} alt={member.name} width={56} height={56} className="object-cover w-full h-full" />
+                  ) : (
+                    <User className="w-7 h-7 text-green-400" />
+                  )}
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs text-green-700 font-semibold uppercase tracking-wide mb-1">{member.role}</div>
+                  <div className="font-bold text-gray-900">{member.name}</div>
+                  {(member.phone || member.email) && (
+                    <div className="mt-1.5 space-y-0.5">
+                      {member.phone && (
+                        <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-green-700 transition-colors">
+                          <Phone className="w-3 h-3" /> {member.phone}
+                        </a>
+                      )}
+                      {member.email && (
+                        <a href={`mailto:${member.email}`} className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-green-700 transition-colors truncate">
+                          <Mail className="w-3 h-3 flex-shrink-0" /> {member.email}
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

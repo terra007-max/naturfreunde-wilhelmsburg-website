@@ -49,6 +49,7 @@ export type BoardMember = {
   name: string;
   phone?: string;
   email?: string;
+  photo?: string;
 };
 
 export const BOARD: BoardMember[] = [
