@@ -14,7 +14,7 @@ export const SITE = {
   clubhouse: "HUGO",
   bus: "Anton",
   address: {
-    street: "Gießerweg 18",
+    street: "Stadtpark 3",
     zip: "3150",
     city: "Wilhelmsburg",
     country: "Österreich",
@@ -173,7 +173,7 @@ export const SECTIONS: ActivitySection[] = [
     description:
       "MTB Stammtisch jeden Mittwoch ab April im HUGO – 3 Leistungsniveaus, 25–40 km. Eigenes Jugendprogramm 'MTB 4 Kids' mit jährlichem Camp.",
     highlights: ["Jeden Mittwoch ab April", "25–40 km Touren", "MTB 4 Kids Camp", "Singletrails"],
-    schedule: "Jeden Mittwoch, April–September, 17:00 Uhr, HUGO",
+    schedule: "Jeden Mittwoch, April–September, 17:00 Uhr, HUGO (Stadtpark 3)",
     contacts: [
       { name: "Alexander Trescher (MTB 4 Kids)", phone: "0699 13336270", email: "alex-trescher@gmx.at" },
     ],
@@ -199,7 +199,7 @@ export const SECTIONS: ActivitySection[] = [
     description:
       "Wöchentlicher Lauftreff jeden Dienstag im HUGO – Kinder- und Erwachsenenprogramm, Vorbereitung auf den jährlichen Stadtlauf.",
     highlights: ["Jeden Dienstag 18:00 Uhr", "Laufkids", "Stadtlauf-Vorbereitung", "Alle Tempos"],
-    schedule: "Jeden Dienstag, 18:00–20:00 Uhr, HUGO",
+    schedule: "Jeden Dienstag, 18:00–20:00 Uhr, HUGO (Stadtpark 3)",
   },
   {
     id: "klettern",
@@ -291,7 +291,7 @@ export const EVENTS: Event[] = [
     date: "2026-04-07",
     time: "18:00",
     endTime: "20:00",
-    location: "HUGO – Gießerweg 18, Wilhelmsburg",
+    location: "HUGO – Stadtpark 3, 3150 Wilhelmsburg",
     category: "Laufsport",
     section: "laufsport",
     description: "Wöchentlicher Lauftreff – alle Tempos willkommen. Ca. 5–10 km durch Wilhelmsburg und Umgebung. Laufkids-Programm parallel.",
@@ -315,7 +315,7 @@ export const EVENTS: Event[] = [
     date: "2026-04-15",
     time: "17:00",
     endTime: "19:30",
-    location: "HUGO – Gießerweg 18, Wilhelmsburg",
+    location: "HUGO – Stadtpark 3, 3150 Wilhelmsburg",
     category: "Mountainbike",
     section: "mtb",
     description: "Erster MTB Stammtisch der Saison 2026! Gemeinschaftsausfahrt in 2–3 Leistungsgruppen, 25–40 km, 350–1.000 Höhenmeter.",
@@ -339,7 +339,7 @@ export const EVENTS: Event[] = [
     date: "2026-05-06",
     time: "17:00",
     endTime: "19:30",
-    location: "HUGO – Gießerweg 18, Wilhelmsburg",
+    location: "HUGO – Stadtpark 3, 3150 Wilhelmsburg",
     category: "Mountainbike",
     section: "mtb",
     description: "Monatliche MTB-Ausfahrt für Kinder und Jugendliche – geführt, sicher und mit viel Spaß!",
