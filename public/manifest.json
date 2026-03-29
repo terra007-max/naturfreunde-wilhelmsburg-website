@@ -1,0 +1,38 @@
+{
+  "name": "Naturfreunde Wilhelmsburg",
+  "short_name": "NF Wilhelmsburg",
+  "description": "Natur erleben. Gemeinschaft leben. Die Naturfreunde Wilhelmsburg-Göblasbruck.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#166534",
+  "theme_color": "#166534",
+  "orientation": "portrait-primary",
+  "lang": "de-AT",
+  "categories": ["sports", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Veranstaltungen",
+      "url": "/veranstaltungen",
+      "description": "Aktuelle Veranstaltungen und Touren"
+    },
+    {
+      "name": "Mitglied werden",
+      "url": "/mitglied-werden",
+      "description": "Jetzt Mitglied werden"
+    }
+  ]
+}
