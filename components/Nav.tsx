@@ -56,14 +56,11 @@ export default function Nav() {
             onClick={() => setOpen(false)}
           >
             <Image
-              src="/logo.png"
-              alt="Naturfreunde Wilhelmsburg"
-              width={162}
-              height={42}
-              className={cn(
-                "h-9 w-auto transition-all",
-                scrolled ? "[filter:invert(27%)_sepia(60%)_saturate(500%)_hue-rotate(95deg)_brightness(70%)]" : "brightness-0 invert"
-              )}
+              src="/logo-ortsgruppe.png"
+              alt="Naturfreunde Wilhelmsburg-Göblasbruck"
+              width={280}
+              height={85}
+              className="h-10 w-auto"
               priority
             />
           </Link>

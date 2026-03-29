@@ -14,11 +14,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-3">
               <Image
-                src="/logo.png"
-                alt="Naturfreunde Wilhelmsburg"
-                width={162}
-                height={42}
-                className="h-8 w-auto brightness-0 invert"
+                src="/logo-ortsgruppe.png"
+                alt="Naturfreunde Wilhelmsburg-Göblasbruck"
+                width={280}
+                height={85}
+                className="h-10 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-green-200 text-sm leading-relaxed mb-4">
