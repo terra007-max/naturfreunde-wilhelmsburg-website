@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Mountain, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -51,15 +52,20 @@ export default function Nav() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-lg text-green-700 hover:text-green-600 transition-colors"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             onClick={() => setOpen(false)}
           >
-            <div className="w-9 h-9 bg-green-700 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Mountain className="w-5 h-5 text-white" />
-            </div>
-            <span className={cn("hidden sm:block transition-colors", scrolled ? "text-green-800" : "text-white drop-shadow")}>
-              Naturfreunde Wilhelmsburg
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Naturfreunde Wilhelmsburg"
+              width={162}
+              height={42}
+              className={cn(
+                "h-9 w-auto transition-all",
+                scrolled ? "[filter:invert(27%)_sepia(60%)_saturate(500%)_hue-rotate(95deg)_brightness(70%)]" : "brightness-0 invert"
+              )}
+              priority
+            />
           </Link>
 
           {/* Desktop links */}

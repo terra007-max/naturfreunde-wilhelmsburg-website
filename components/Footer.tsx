@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mountain, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 import { SITE } from "@/lib/data";
 
 export default function Footer() {
@@ -11,13 +12,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                <Mountain className="w-4 h-4 text-white" />
-              </div>
-              <span className="font-bold text-white text-sm leading-tight">
-                Naturfreunde<br />Wilhelmsburg
-              </span>
+            <div className="mb-3">
+              <Image
+                src="/logo.png"
+                alt="Naturfreunde Wilhelmsburg"
+                width={162}
+                height={42}
+                className="h-8 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-green-200 text-sm leading-relaxed mb-4">
               {SITE.tagline}
