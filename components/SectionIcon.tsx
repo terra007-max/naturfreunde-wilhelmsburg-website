@@ -61,19 +61,17 @@ const icons: Record<string, (p: Props) => React.ReactElement> = {
       <g className="icon-wheel">
         <circle cx="14" cy="36" r="7" strokeWidth="2" />
         <circle cx="14" cy="36" r="1.5" fill="currentColor" strokeWidth="0" />
-        <line x1="14" y1="29" x2="14" y2="43" strokeWidth="1" />
-        <line x1="7" y1="36" x2="21" y2="36" strokeWidth="1" />
-        <line x1="9.1" y1="31.1" x2="18.9" y2="40.9" strokeWidth="1" />
-        <line x1="18.9" y1="31.1" x2="9.1" y2="40.9" strokeWidth="1" />
+        <line x1="14" y1="29" x2="14" y2="36" strokeWidth="1.2" />
+        <line x1="20.1" y1="39.5" x2="14" y2="36" strokeWidth="1.2" />
+        <line x1="7.9" y1="39.5" x2="14" y2="36" strokeWidth="1.2" />
       </g>
       {/* Front wheel — spins */}
       <g className="icon-wheel">
         <circle cx="34" cy="36" r="7" strokeWidth="2" />
         <circle cx="34" cy="36" r="1.5" fill="currentColor" strokeWidth="0" />
-        <line x1="34" y1="29" x2="34" y2="43" strokeWidth="1" />
-        <line x1="27" y1="36" x2="41" y2="36" strokeWidth="1" />
-        <line x1="29.1" y1="31.1" x2="38.9" y2="40.9" strokeWidth="1" />
-        <line x1="38.9" y1="31.1" x2="29.1" y2="40.9" strokeWidth="1" />
+        <line x1="34" y1="29" x2="34" y2="36" strokeWidth="1.2" />
+        <line x1="40.1" y1="39.5" x2="34" y2="36" strokeWidth="1.2" />
+        <line x1="27.9" y1="39.5" x2="34" y2="36" strokeWidth="1.2" />
       </g>
       {/* Frame — static */}
       <path d="M14 36 L22 22 L34 36" strokeWidth="2" />
@@ -93,19 +91,17 @@ const icons: Record<string, (p: Props) => React.ReactElement> = {
       <g className="icon-wheel">
         <circle cx="12" cy="34" r="9" strokeWidth="2" />
         <circle cx="12" cy="34" r="2" fill="currentColor" strokeWidth="0" />
-        <line x1="12" y1="25" x2="12" y2="43" strokeWidth="1" />
-        <line x1="3" y1="34" x2="21" y2="34" strokeWidth="1" />
-        <line x1="5.6" y1="27.6" x2="18.4" y2="40.4" strokeWidth="1" />
-        <line x1="18.4" y1="27.6" x2="5.6" y2="40.4" strokeWidth="1" />
+        <line x1="12" y1="25" x2="12" y2="34" strokeWidth="1.2" />
+        <line x1="19.8" y1="38.5" x2="12" y2="34" strokeWidth="1.2" />
+        <line x1="4.2" y1="38.5" x2="12" y2="34" strokeWidth="1.2" />
       </g>
       {/* Front wheel — spins */}
       <g className="icon-wheel">
         <circle cx="36" cy="34" r="9" strokeWidth="2" />
         <circle cx="36" cy="34" r="2" fill="currentColor" strokeWidth="0" />
-        <line x1="36" y1="25" x2="36" y2="43" strokeWidth="1" />
-        <line x1="27" y1="34" x2="45" y2="34" strokeWidth="1" />
-        <line x1="29.6" y1="27.6" x2="42.4" y2="40.4" strokeWidth="1" />
-        <line x1="42.4" y1="27.6" x2="29.6" y2="40.4" strokeWidth="1" />
+        <line x1="36" y1="25" x2="36" y2="34" strokeWidth="1.2" />
+        <line x1="43.8" y1="38.5" x2="36" y2="34" strokeWidth="1.2" />
+        <line x1="28.2" y1="38.5" x2="36" y2="34" strokeWidth="1.2" />
       </g>
       {/* Frame — static */}
       <path d="M12 34 L22 20 L36 34" strokeWidth="2" />

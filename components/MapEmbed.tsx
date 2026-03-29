@@ -3,7 +3,7 @@ export default function MapEmbed() {
     <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
       <iframe
         title="HUGO – Naturfreunde Wilhelmsburg, Stadtpark 3, 3150 Wilhelmsburg"
-        src="https://maps.google.com/maps?q=48.14313,15.60405&t=&z=18&ie=UTF8&iwloc=&output=embed"
+        src="https://maps.google.com/maps?q=48.099572,15.601600&t=&z=18&ie=UTF8&iwloc=&output=embed"
         width="100%"
         height="320"
         style={{ border: 0 }}
