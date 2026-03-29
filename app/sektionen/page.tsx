@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import SectionIcon from "@/components/SectionIcon";
 import { SECTIONS, EVENTS, SITE } from "@/lib/data";
@@ -37,15 +38,21 @@ export default function SektionenPage() {
             >
               {/* Visual */}
               <div className="w-full lg:w-2/5 flex-shrink-0">
-                <div className={`relative rounded-3xl bg-gradient-to-br ${section.color} aspect-video flex items-center justify-center overflow-hidden shadow-lg`}>
-                  <SectionIcon id={section.id} className="w-28 h-28 text-white/85 drop-shadow" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-black/20 backdrop-blur-sm rounded-xl px-3 py-2">
-                      <div className="text-white font-bold text-sm">{section.title}</div>
+                <div className={`relative rounded-3xl bg-gradient-to-br ${section.color} aspect-video overflow-hidden shadow-lg`}>
+                  {section.photo ? (
+                    <Image src={section.photo} alt={section.title} fill className="object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <SectionIcon id={section.id} className="w-28 h-28 text-white/85 drop-shadow" />
                     </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2">
+                    <span className={`p-1.5 rounded-lg bg-gradient-to-br ${section.color} text-white/90`}>
+                      <SectionIcon id={section.id} className="w-5 h-5" />
+                    </span>
+                    <div className="text-white font-bold text-sm drop-shadow">{section.title}</div>
                   </div>
-                  <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full" />
-                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white/10 rounded-full" />
                 </div>
               </div>
 

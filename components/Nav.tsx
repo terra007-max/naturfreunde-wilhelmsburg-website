@@ -24,6 +24,7 @@ const NAV_LINKS = [
   { label: "Veranstaltungen", href: "/veranstaltungen" },
   { label: "Schitourenprogramm", href: "/schitourenprogramm" },
   { label: "Stadtlauf", href: "/stadtlauf" },
+  { label: "Vereinsbus", href: "/vereinsbus" },
   { label: "Mitglied werden", href: "/mitglied-werden" },
 ];
 

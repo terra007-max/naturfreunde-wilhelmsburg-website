@@ -122,7 +122,11 @@ export default function EventsList({ events }: { events: Event[] }) {
                   </div>
 
                   {/* CTA */}
-                  <div className="flex-shrink-0 flex items-center pr-4 sm:pr-5">
+                  <div className="flex-shrink-0 flex flex-col items-end gap-2 pr-4 sm:pr-5">
+                    <Link href={`/veranstaltungen/${event.id}`}
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium border border-gray-200 text-gray-600 hover:border-green-400 hover:text-green-700 transition-colors">
+                      Details <ChevronRight className="w-3 h-3" />
+                    </Link>
                     {event.registrationRequired ? (
                       <button
                         onClick={() => !soldOut && setSelectedEvent(event)}

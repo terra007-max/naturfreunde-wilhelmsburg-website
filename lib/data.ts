@@ -120,6 +120,7 @@ export type ActivitySection = {
   title: string;
   icon: string;
   color: string;
+  photo?: string;
   description: string;
   highlights: string[];
   schedule?: string;
@@ -132,6 +133,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Skitouren",
     icon: "⛷️",
     color: "from-blue-500 to-blue-700",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2014/11/Schitouren.jpg",
     description:
       "Hochalpine Skitouren bis auf über 3.000 m Seehöhe – von leichten Einsteigertouren bis zu mehrtägigen Hochtourenwochen ins Ötztal und die Hohen Tauern.",
     highlights: ["Ötztal bis 3.000m", "Hohe Tauern", "Sicherheitskurse", "Skiverleih ab €5/Tag"],
@@ -145,6 +147,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Wintersport & Kinderskikurs",
     icon: "🏔️",
     color: "from-sky-400 to-sky-600",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2011/12/Kinder-Sport-Renn-Gruppe-2011-201211.jpg",
     description:
       "Jährlicher Kinderskikurs in Annaberg – professionell betreut von staatlich geprüften Skilehrern für Anfänger bis Fortgeschrittene.",
     highlights: ["Annaberg", "Staatl. geprüfte Lehrer", "Anfänger bis Fortg.", "Familienprogramm"],
@@ -157,6 +160,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Wanderungen",
     icon: "🥾",
     color: "from-green-500 to-green-700",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2021/04/Wanderwoche-Schoisengeier-Franz-NF-300x225.jpg",
     description:
       "Geführte Tages- und Mehrtageswanderungen. 5 eigene markierte Wanderwege rund um Wilhelmsburg, Frühjahrswanderungen und Mehrtagestouren ins Zillertal.",
     highlights: ["5 eigene Wanderwege", "Zillertal-Woche", "Geführte Touren", "Via Ferrata"],
@@ -170,6 +174,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Mountainbike & MTB 4 Kids",
     icon: "🚵",
     color: "from-orange-500 to-orange-700",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2022/04/MTB-Guide-Team-2022-2.jpg",
     description:
       "MTB Stammtisch jeden Mittwoch ab April im HUGO – 3 Leistungsniveaus, 25–40 km. Eigenes Jugendprogramm 'MTB 4 Kids' mit jährlichem Camp.",
     highlights: ["Jeden Mittwoch ab April", "25–40 km Touren", "MTB 4 Kids Camp", "Singletrails"],
@@ -183,6 +188,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Radtouren",
     icon: "🚴",
     color: "from-yellow-500 to-yellow-700",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2012/09/Grenzlandtour_771.jpg",
     description:
       "Gemütliche Radtouren auf asphaltierten Wegen durch Niederösterreich und das Burgenland – für Familien und Genussradler.",
     highlights: ["Genussstempo", "Niederösterreich & Burgenland", "Grenzlandtour", "Familienfreundlich"],
@@ -196,6 +202,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Laufsport & Lauftreff",
     icon: "🏃",
     color: "from-red-500 to-red-700",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2009/09/Naturfreunde-Laufen-Wilhelmsburg.jpg",
     description:
       "Wöchentlicher Lauftreff jeden Dienstag im HUGO – Kinder- und Erwachsenenprogramm, Vorbereitung auf den jährlichen Stadtlauf.",
     highlights: ["Jeden Dienstag 18:00 Uhr", "Laufkids", "Stadtlauf-Vorbereitung", "Alle Tempos"],
@@ -215,6 +222,7 @@ export const SECTIONS: ActivitySection[] = [
     title: "Nordic Walking",
     icon: "🚶",
     color: "from-teal-500 to-teal-700",
+    photo: "https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2009/09/walker01.jpg",
     description:
       "Regelmäßige Nordic Walking Gruppen für alle Fitnessstufen rund um Wilhelmsburg – Teil der Wandersektion.",
     highlights: ["Anfängerfreundlich", "Alle Altersgruppen", "Stocktechnik", "Natur & Bewegung"],
