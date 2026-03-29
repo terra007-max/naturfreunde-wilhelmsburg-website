@@ -2,23 +2,32 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Calendar, MapPin, Clock, Users, Euro, ChevronRight, Info } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, Euro, ChevronRight, Info, Mountain, Snowflake, Compass, Bike, Route, Activity, ArrowUpToLine, Footprints, PartyPopper } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { type Event, SECTIONS, SITE } from "@/lib/data";
 import { formatDate, categoryColor, spotsPercent } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import EventRegistrationModal from "@/components/EventRegistrationModal";
 
-const CATEGORY_ICONS: Record<string, string> = {
-  Laufsport: "🏃", Wandern: "🥾", Mountainbike: "🚵", Skitouren: "⛷️",
-  Wintersport: "🏔️", Klettern: "🧗", "Nordic Walking": "🚶", Radtouren: "🚴", Gemeinschaft: "🎉",
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  Laufsport: Activity,
+  Wandern: Compass,
+  Mountainbike: Bike,
+  Skitouren: Mountain,
+  Wintersport: Snowflake,
+  Klettern: ArrowUpToLine,
+  "Nordic Walking": Footprints,
+  Radtouren: Route,
+  Gemeinschaft: PartyPopper,
 };
 
 export default function EventsList({ events }: { events: Event[] }) {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [filter, setFilter] = useState<string>("Alle");
 
-  const categories = ["Alle", ...Array.from(new Set(events.map((e) => e.category)))];
-  const filtered = filter === "Alle" ? events : events.filter((e) => e.category === filter);
+  const sorted = [...events].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  const categories = ["Alle", ...Array.from(new Set(sorted.map((e) => e.category)))];
+  const filtered = filter === "Alle" ? sorted : sorted.filter((e) => e.category === filter);
 
   return (
     <>
@@ -28,12 +37,13 @@ export default function EventsList({ events }: { events: Event[] }) {
           {categories.map((cat) => (
             <button key={cat} onClick={() => setFilter(cat)}
               className={cn(
-                "px-4 py-1.5 text-sm rounded-full transition-colors font-medium",
+                "inline-flex items-center gap-1.5 px-4 py-1.5 text-sm rounded-full transition-colors font-medium",
                 filter === cat
                   ? "bg-green-600 text-white shadow-sm"
                   : "bg-white border border-gray-200 text-gray-700 hover:border-green-400 hover:text-green-700"
               )}>
-              {cat !== "Alle" ? `${CATEGORY_ICONS[cat] ?? "📅"} ` : ""}{cat}
+              {cat !== "Alle" && (() => { const Icon = CATEGORY_ICONS[cat]; return Icon ? <Icon className="w-3.5 h-3.5" /> : null; })()}
+              {cat}
             </button>
           ))}
         </div>

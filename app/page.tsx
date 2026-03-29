@@ -1,6 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Users, Calendar, ArrowRight, MapPin, ChevronRight, Star, CheckCircle2, Zap } from "lucide-react";
+import { Users, Calendar, ArrowRight, MapPin, ChevronRight, Star, CheckCircle2, Zap, Mountain, Snowflake, Compass, Bike, Route, Activity, ArrowUpToLine, Footprints } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+const SECTION_ICONS: Record<string, LucideIcon> = {
+  skitouren: Mountain,
+  wintersport: Snowflake,
+  wandern: Compass,
+  mtb: Bike,
+  radtouren: Route,
+  laufsport: Activity,
+  klettern: ArrowUpToLine,
+  "nordic-walking": Footprints,
+};
 import { SITE, SECTIONS, NEWS, EVENTS } from "@/lib/data";
 import { formatDateShort, formatMonth, formatDay, categoryColor } from "@/lib/utils";
 
@@ -124,7 +136,7 @@ function Activities() {
             <Link key={section.id} href={`/sektionen#${section.id}`}
               className={`group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-br ${section.color} text-white hover:scale-[1.03] transition-transform shadow-sm hover:shadow-md animate-fadeInUp`}
               style={{ animationDelay: `${i * 0.05}s` }}>
-              <div className="text-3xl mb-2">{section.icon}</div>
+              {(() => { const Icon = SECTION_ICONS[section.id]; return Icon ? <Icon className="w-8 h-8 mb-2" /> : null; })()}
               <h3 className="font-bold text-sm leading-tight">{section.title}</h3>
               <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <ChevronRight className="w-4 h-4" />
