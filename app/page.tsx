@@ -106,16 +106,16 @@ function UpcomingEvents() {
 
 function Activities() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-block bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+          <div className="inline-block bg-green-100 text-green-700 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
             Sektionen
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
             Für jeden das Richtige
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+          <p className="text-gray-500 max-w-xl mx-auto">
             Acht aktive Sektionen bieten das ganze Jahr über ein vielfältiges Programm.
           </p>
         </div>
@@ -146,14 +146,14 @@ function Activities() {
 
 function News() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-950">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <div className="inline-block bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+            <div className="inline-block bg-green-100 text-green-700 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
               Aktuelles
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">Was bei uns los ist</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900">Was bei uns los ist</h2>
           </div>
           <Link href="/aktuelles" className="hidden sm:flex items-center gap-1 text-green-600 hover:text-green-800 font-medium transition-colors">
             Alle Beiträge <ArrowRight className="w-4 h-4" />
@@ -166,7 +166,7 @@ function News() {
             );
             return (
               <article key={item.id}
-                className="group bg-gray-50 dark:bg-gray-900 hover:bg-white dark:hover:bg-gray-800 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:border-green-200 dark:hover:border-green-800 hover:shadow-md transition-all animate-fadeInUp"
+                className="group bg-gray-50 hover:bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-green-200 hover:shadow-md transition-all animate-fadeInUp"
                 style={{ animationDelay: `${i * 0.1}s` }}>
                 {/* Real photo */}
                 <div className="relative h-40 overflow-hidden">
@@ -186,10 +186,10 @@ function News() {
                     </span>
                     <span className="text-xs text-gray-400">{formatDateShort(item.date)}</span>
                   </div>
-                  <h3 className="font-bold text-gray-900 dark:text-white text-sm leading-snug mb-2 group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors line-clamp-2">
+                  <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2 group-hover:text-green-700 transition-colors line-clamp-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-3">{item.excerpt}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">{item.excerpt}</p>
                 </div>
               </article>
             );

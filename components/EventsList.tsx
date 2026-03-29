@@ -31,7 +31,7 @@ export default function EventsList({ events }: { events: Event[] }) {
                 "px-4 py-1.5 text-sm rounded-full transition-colors font-medium",
                 filter === cat
                   ? "bg-green-600 text-white shadow-sm"
-                  : "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-green-400 hover:text-green-700"
+                  : "bg-white border border-gray-200 text-gray-700 hover:border-green-400 hover:text-green-700"
               )}>
               {cat !== "Alle" ? `${CATEGORY_ICONS[cat] ?? "📅"} ` : ""}{cat}
             </button>
@@ -50,7 +50,7 @@ export default function EventsList({ events }: { events: Event[] }) {
 
             return (
               <div key={event.id} id={event.id}
-                className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-green-200 dark:hover:border-green-800 hover:shadow-md transition-all overflow-hidden">
+                className="bg-white rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-md transition-all overflow-hidden">
                 <div className="flex">
                   {/* Date column */}
                   <div className={`flex-shrink-0 w-20 bg-gradient-to-b ${section?.color ?? "from-green-500 to-green-700"} flex flex-col items-center justify-center text-white p-3`}>
@@ -74,10 +74,10 @@ export default function EventsList({ events }: { events: Event[] }) {
                       {almostFull && <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">Fast ausgebucht</span>}
                       {soldOut && <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700 font-medium">Ausgebucht</span>}
                     </div>
-                    <h2 className="text-gray-900 dark:text-white font-bold text-base sm:text-lg mb-1">{event.title}</h2>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-3 leading-relaxed line-clamp-2">{event.description}</p>
+                    <h2 className="text-gray-900 font-bold text-base sm:text-lg mb-1">{event.title}</h2>
+                    <p className="text-gray-500 text-sm mb-3 leading-relaxed line-clamp-2">{event.description}</p>
 
-                    <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-gray-400 dark:text-gray-500">
+                    <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-gray-400">
                       <span className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
                         {formatDate(event.date)}{event.time ? ` · ${event.time}` : ""}
@@ -103,7 +103,7 @@ export default function EventsList({ events }: { events: Event[] }) {
 
                     {pct !== null && (
                       <div className="mt-3 max-w-xs">
-                        <div className="h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
                           <div className={cn("h-full rounded-full", pct >= 80 ? "bg-amber-500" : "bg-green-500")}
                             style={{ width: `${pct}%` }} />
                         </div>
@@ -120,7 +120,7 @@ export default function EventsList({ events }: { events: Event[] }) {
                         className={cn(
                           "inline-flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-colors",
                           soldOut
-                            ? "bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed"
+                            ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                             : "bg-green-600 hover:bg-green-700 text-white"
                         )}>
                         {soldOut ? "Ausgebucht" : "Anmelden"}
@@ -146,9 +146,9 @@ export default function EventsList({ events }: { events: Event[] }) {
         )}
 
         {/* Contact */}
-        <div className="mt-12 bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-900 rounded-2xl p-6 text-center">
-          <h3 className="font-bold text-gray-900 dark:text-white mb-2">Fragen zu Veranstaltungen?</h3>
-          <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+        <div className="mt-12 bg-green-50 border border-green-100 rounded-2xl p-6 text-center">
+          <h3 className="font-bold text-gray-900 mb-2">Fragen zu Veranstaltungen?</h3>
+          <p className="text-gray-600 text-sm mb-4">
             Wende dich direkt an uns – wir helfen gerne bei der Anmeldung.
           </p>
           <a href={`mailto:${SITE.contact.email}`}

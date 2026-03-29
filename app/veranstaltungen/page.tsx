@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-br from-green-800 to-green-700 pt-28 pb-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center text-white">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm mb-4">
