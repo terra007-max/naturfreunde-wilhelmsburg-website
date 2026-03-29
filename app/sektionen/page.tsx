@@ -38,7 +38,7 @@ export default function SektionenPage() {
               {/* Visual */}
               <div className="w-full lg:w-2/5 flex-shrink-0">
                 <div className={`relative rounded-3xl bg-gradient-to-br ${section.color} aspect-video flex items-center justify-center overflow-hidden shadow-lg`}>
-                  <SectionIcon id={section.id} className="w-24 h-24 opacity-90" />
+                  <SectionIcon id={section.id} className="w-28 h-28 text-white/85 drop-shadow" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-black/20 backdrop-blur-sm rounded-xl px-3 py-2">
                       <div className="text-white font-bold text-sm">{section.title}</div>
@@ -52,8 +52,8 @@ export default function SektionenPage() {
               {/* Content */}
               <div className="flex-1">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 flex items-center gap-3">
-                  <span className="text-green-600 flex-shrink-0">
-                    <SectionIcon id={section.id} className="w-8 h-8" />
+                  <span className={`flex-shrink-0 p-1.5 rounded-lg bg-gradient-to-br ${section.color} text-white/90`}>
+                    <SectionIcon id={section.id} className="w-6 h-6" />
                   </span>
                   {section.title}
                 </h2>

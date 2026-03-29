@@ -126,7 +126,7 @@ function Activities() {
               className={`group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-br ${section.color} text-white hover:scale-[1.03] transition-transform shadow-sm hover:shadow-md animate-fadeInUp`}
               style={{ animationDelay: `${i * 0.05}s` }}>
               <div className="mb-3 transition-transform duration-300 will-change-transform group-hover:scale-110 group-hover:-translate-y-1">
-                <SectionIcon id={section.id} className="w-10 h-10" />
+                <SectionIcon id={section.id} className="w-10 h-10 text-white/85 drop-shadow" />
               </div>
               <h3 className="font-bold text-sm leading-tight">{section.title}</h3>
               <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
